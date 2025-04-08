@@ -1,0 +1,11 @@
+<% content_for :title, "New mocropost" %>
+
+<h1>New mocropost</h1>
+
+<%= render "form", mocropost: @mocropost %>
+
+<br>
+
+<div>
+  <%= link_to "Back to mocroposts", mocroposts_path %>
+</div>
