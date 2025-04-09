@@ -3,9 +3,15 @@ Rails.application.routes.draw do
   get "home/about"
   get "home/contactus"
   get "home/help"
-  resources :mocroposts
-  resources :users
+ # resources :mocroposts
+  #resources :users
 
+  resources :microposts do  
+    member do
+      get :like
+    end
+  end
+  resources :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
