@@ -6,6 +6,10 @@ Rails.application.routes.draw do
   get "home/about"
   get "home/contactus"
   get "home/help"
+  get "home/Rose"
+
+
+
   
   resources :microposts do
     member do
