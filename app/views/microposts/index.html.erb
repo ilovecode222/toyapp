@@ -1,0 +1,19 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Microposts" %>
+
+<div class="card">
+  <div class="card-header">
+    <i class="bi bi-journals"></i> <%= pluralize(@microposts.count, "MICROPOST", plural:"MICROPOSTS") %>
+    <a href="<%= new_micropost_path %>" class="btn btn-primary btn-sm float-end"><i class="bi bi-pencil-square"></i> New Micropost</a>
+  </div>
+  <div class="card-body">
+
+    <div class="card-group" id="microposts">
+      <% @microposts.each do |micropost| %>
+        <%= render micropost %>
+      <% end %>
+    </div>
+
+  </div>
+</div>

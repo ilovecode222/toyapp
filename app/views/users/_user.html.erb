@@ -1,0 +1,16 @@
+
+<div id="<%= dom_id user %>" class="card">
+  <div class="card-header">
+    <%= user.name %>
+    <a href="<%= edit_user_path(@user) %>" class="btn btn-warning btn-sm float-end"><i class="bi bi-pencil-square"></i> Edit User</a>
+    
+  </div>
+  <div class="card-body">
+    <p class="card-text"><%= user.email %></p>
+    <span class="badge text-bg-success"><%= pluralize(user.microposts.count,'micropost') %> created!</span>
+  </div>
+  <div class="card-footer">
+    <%= button_to "Destroy this user", @user, method: :delete, class: "btn btn-danger btn-sm" %>
+    <small class="text-body-secondary"><%= user.details %></small>
+  </div>
+</div>
